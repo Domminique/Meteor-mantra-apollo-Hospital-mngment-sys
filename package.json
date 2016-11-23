@@ -37,15 +37,11 @@
   "author": "Tevin Thuku",
   "license": "MIT",
   "devDependencies": {
-    "@kadira/storybook": "^2.30.1",
     "chai": "^3.5.0",
     "enzyme": "^2.6.0",
     "jsdom": "^9.8.3",
     "mocha": "^3.1.2",
     "react-addons-test-utils": "^15.4.0",
     "sinon": "^1.17.6"
-  },
-  "peerDependencies": {
-    "@kadira/storybook-addons": "^1.6.1"
   }
 }
