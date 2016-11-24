@@ -6,11 +6,12 @@ const Mainlayout = ({user, content = () => null}) => {
   // authentication const
   const authentication = user
   ? <div style={{float: 'right'}}>
-      <h1>You are logged in</h1>
-      <br />
       <a href="/sign-out">Log Out</a>
     </div>
-  : <a style={{float: 'right'}} href="/signup">Create Account</a>;
+  : <div>
+      <a style={{float: 'right',margin: 10}} href="/signup">Create Account</a>
+      <a style={{float: 'right',margin: 10}} href="/login">Login</a>
+    </div>
 
 
   return (

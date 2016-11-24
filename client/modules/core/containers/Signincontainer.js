@@ -1,5 +1,5 @@
 import { useDeps, composeWithTracker, composeAll } from 'mantra-core';
-import Signup from '../components/Signup.jsx';
+import Signin from '../components/Login.jsx';
 
 // we are quering to see if there is a user that is logged in
 // if he aint logged in then the signup form can be viewed
@@ -42,11 +42,11 @@ export const composer = ({ context }, onData) => {
 
 export const depsMapper = (context, actions) => ({
   FlowRouter: context.FlowRouter,
-  signUp: actions.hospital.signUp,
+  signIn: actions.hospital.signIn,
   context: () => context
 });
 
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(Signup);
+)(Signin);

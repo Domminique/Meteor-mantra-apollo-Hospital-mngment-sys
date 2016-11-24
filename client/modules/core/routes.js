@@ -7,6 +7,8 @@ import Home from './components/Home.jsx';
 
 import Signup from './containers/Signupcontainer.js';
 
+import Signin from './containers/Signincontainer.js';
+
 // the routing takes place here
 export default function (injectDeps) {
 
@@ -29,5 +31,30 @@ export default function (injectDeps) {
         content: () => (<Signup />)
       });
     }
-  })
+  });
+
+  // sign in route
+  FlowRouter.route('/login', {
+    name: 'Sign In',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Signin />)
+      });
+    }
+  });
+
+  // sign-out route
+  // sign out
+  FlowRouter.route('/sign-out', {
+    name: 'auth.signOut',
+    action() {
+      Meteor.logout((error) => {
+        if (error) {
+          return show({text: 'Log Out Error'});
+        }
+        FlowRouter.go('/');
+        alert("You have been logged out");
+      });
+    }
+  });
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Signup extends React.Component {
+export default class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {email: '', password: ''};
@@ -20,10 +20,10 @@ export default class Signup extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const {signUp} = this.props;
+    const {signIn} = this.props;
     const email = this.state.email;
     const password = this.state.password;
-    signUp({email, password});
+    signIn({email, password});
   }
 
   render() {
@@ -37,6 +37,7 @@ export default class Signup extends React.Component {
           user
             ? ''
             :        <form onSubmit={this.handleSubmit}>
+                      <h3>Login</h3>
                         <label>
                           email:
                           <input type="text" value={this.state.email} onChange={this.handleEmailChange} />
@@ -44,7 +45,7 @@ export default class Signup extends React.Component {
                           password:
                           <input type="password" value={this.state.password} onChange={this.handlePasswordChange} />
                         </label>
-                        <input type="submit" value="Create Account" />
+                        <input type="submit" value="login" />
                       </form>
         }
       </div>
