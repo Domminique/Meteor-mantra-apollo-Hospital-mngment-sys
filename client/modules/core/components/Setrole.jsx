@@ -63,6 +63,7 @@ setUserToReceptionist() {
       // if you are not logged in... you are given a login option
         return (
           <div>
+            <h3>Login to see your role or even switch roles</h3>
             <a href="/login"><button>Login</button></a>
           </div>
         )

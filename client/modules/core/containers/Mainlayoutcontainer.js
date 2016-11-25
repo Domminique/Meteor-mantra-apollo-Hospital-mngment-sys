@@ -7,9 +7,7 @@ export const composer = ({ context }, onData) => {
     const query = gql`
       query getUser($id: String!) {
         user(id: $id) {
-          profile {
-            firstName
-          }
+          _id
         }
       }
     `;
