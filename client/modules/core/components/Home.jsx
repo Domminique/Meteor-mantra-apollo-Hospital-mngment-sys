@@ -1,8 +1,11 @@
 import React from 'react';
 
+import Setrole from '../containers/Setrolecontainer.js';
+
+
 const Home = () => (
   <div>
-    <h2>Hello World!!!!!</h2>
+    <Setrole />
   </div>
 )
 
